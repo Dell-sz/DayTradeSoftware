@@ -1,11 +1,16 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.chart.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.util.*;
 
 public class DayTradeSoftware extends Application {
 
@@ -71,23 +76,16 @@ public class DayTradeSoftware extends Application {
 
         Button btnBacktest = new Button("Run Backtest");
         btnBacktest.setOnAction(e -> {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Backtest");
-            alert.setHeaderText("Backtest Started");
-            alert.setContentText("Simulating historical data...");
-            alert.showAndWait();
+            System.out.println("Running backtest...");
         });
 
         Button btnAlert = new Button("Set Alerts");
         btnAlert.setOnAction(e -> {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Alerts");
-            alert.setHeaderText("Alerts Setup");
-            alert.setContentText("Configure market alerts here.");
-            alert.showAndWait();
+            System.out.println("Setting alerts...");
         });
 
         vbox.getChildren().addAll(label, btnBacktest, btnAlert);
         return vbox;
     }
 }
+
